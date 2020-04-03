@@ -17,7 +17,7 @@ pub enum Accidental {
 }
 
 pub struct Pitch {
-    octave: i8,
-    pitch_name: PitchName,
-    accidental: Accidental,
+    pub octave: i8,
+    pub pitch_name: PitchName,
+    pub accidental: Accidental,
 }
