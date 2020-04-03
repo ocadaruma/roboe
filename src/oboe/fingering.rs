@@ -2,33 +2,35 @@
 
 use crate::music::note::*;
 
-pub const RIGHT_LITTLE_EFLAT   :u32 = 1 << 0;
-pub const RIGHT_LITTLE_CSHARP  :u32 = 1 << 1;
-pub const RIGHT_LITTLE_C       :u32 = 1 << 2;
-pub const RIGHT_RING           :u32 = 1 << 3;
-pub const RIGHT_RING_F         :u32 = 1 << 4;
-pub const RIGHT_MIDDLE         :u32 = 1 << 5;
-pub const RIGHT_MIDDLE_TR3     :u32 = 1 << 6;
-pub const RIGHT_POINTER        :u32 = 1 << 7;
-pub const RIGHT_POINTER_GSHARP :u32 = 1 << 8;
+pub type Key = u32;
 
-pub const LEFT_LITTLE_F        :u32 = 1 << 9;
-pub const LEFT_LITTLE_BFLAT    :u32 = 1 << 10;
-pub const LEFT_LITTLE_B        :u32 = 1 << 11;
-pub const LEFT_LITTLE_EFLAT    :u32 = 1 << 12;
-pub const LEFT_LITTLE_GSHARP   :u32 = 1 << 13;
-pub const LEFT_RING            :u32 = 1 << 14;
-pub const LEFT_RING_TR2        :u32 = 1 << 15;
-pub const LEFT_MIDDLE          :u32 = 1 << 16;
-pub const LEFT_MIDDLE_TR1      :u32 = 1 << 17;
-pub const LEFT_POINTER         :u32 = 1 << 18;
-pub const LEFT_POINTER_HALF    :u32 = 1 << 19;
-pub const LEFT_POINTER_82      :u32 = 1 << 20;
-pub const LEFT_THUMB_81        :u32 = 1 << 21;
-pub const LEFT_THUMB_83        :u32 = 1 << 22;
+pub const RIGHT_LITTLE_EFLAT   :Key = 1 << 0;
+pub const RIGHT_LITTLE_CSHARP  :Key = 1 << 1;
+pub const RIGHT_LITTLE_C       :Key = 1 << 2;
+pub const RIGHT_RING           :Key = 1 << 3;
+pub const RIGHT_RING_F         :Key = 1 << 4;
+pub const RIGHT_MIDDLE         :Key = 1 << 5;
+pub const RIGHT_MIDDLE_TR3     :Key = 1 << 6;
+pub const RIGHT_POINTER        :Key = 1 << 7;
+pub const RIGHT_POINTER_GSHARP :Key = 1 << 8;
+
+pub const LEFT_LITTLE_F        :Key = 1 << 9;
+pub const LEFT_LITTLE_BFLAT    :Key = 1 << 10;
+pub const LEFT_LITTLE_B        :Key = 1 << 11;
+pub const LEFT_LITTLE_EFLAT    :Key = 1 << 12;
+pub const LEFT_LITTLE_GSHARP   :Key = 1 << 13;
+pub const LEFT_RING            :Key = 1 << 14;
+pub const LEFT_RING_TR2        :Key = 1 << 15;
+pub const LEFT_MIDDLE          :Key = 1 << 16;
+pub const LEFT_MIDDLE_TR1      :Key = 1 << 17;
+pub const LEFT_POINTER         :Key = 1 << 18;
+pub const LEFT_POINTER_HALF    :Key = 1 << 19;
+pub const LEFT_POINTER_82      :Key = 1 << 20;
+pub const LEFT_THUMB_81        :Key = 1 << 21;
+pub const LEFT_THUMB_83        :Key = 1 << 22;
 
 /// Convert a bit flag of key combination to pitch
-pub fn keys_to_pitch(combination: u32) -> Option<Pitch> {
+pub fn keys_to_pitch(combination: Key) -> Option<Pitch> {
     match combination {
         // Bb3
         n if n == LEFT_POINTER | LEFT_MIDDLE | LEFT_RING | LEFT_LITTLE_BFLAT | RIGHT_POINTER | RIGHT_MIDDLE | RIGHT_RING | RIGHT_LITTLE_C =>
