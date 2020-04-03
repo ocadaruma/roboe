@@ -110,6 +110,70 @@ pub fn keys_to_pitch(combination: u32) -> Option<Pitch> {
         // G5
         n if n == LEFT_THUMB_81 | LEFT_POINTER | LEFT_MIDDLE | LEFT_RING =>
             Some(Pitch { octave: 5, pitch_name: PitchName::G, accidental: Accidental::Natural, }),
+        // G#5
+        n if n == LEFT_THUMB_81 | LEFT_POINTER | LEFT_MIDDLE | LEFT_RING | LEFT_LITTLE_GSHARP =>
+            Some(Pitch { octave: 5, pitch_name: PitchName::G, accidental: Accidental::Sharp, }),
+        n if n == LEFT_THUMB_81 | LEFT_POINTER | LEFT_MIDDLE | LEFT_RING | RIGHT_POINTER_GSHARP =>
+            Some(Pitch { octave: 5, pitch_name: PitchName::G, accidental: Accidental::Sharp, }),
+        // A5
+        n if n == LEFT_THUMB_81 | LEFT_POINTER_82 | LEFT_POINTER | LEFT_MIDDLE =>
+            Some(Pitch { octave: 5, pitch_name: PitchName::A, accidental: Accidental::Natural, }),
+        n if n == LEFT_POINTER_82 | LEFT_POINTER | LEFT_MIDDLE =>
+            Some(Pitch { octave: 5, pitch_name: PitchName::A, accidental: Accidental::Natural, }),
+        // Bb5
+        n if n == LEFT_THUMB_81 | LEFT_POINTER_82 | LEFT_POINTER | LEFT_MIDDLE | RIGHT_POINTER =>
+            Some(Pitch { octave: 5, pitch_name: PitchName::B, accidental: Accidental::Flat, }),
+        n if n == LEFT_POINTER_82 | LEFT_POINTER | LEFT_MIDDLE | RIGHT_POINTER =>
+            Some(Pitch { octave: 5, pitch_name: PitchName::B, accidental: Accidental::Flat, }),
+        // B5
+        n if n == LEFT_THUMB_81 | LEFT_POINTER_82 | LEFT_POINTER =>
+            Some(Pitch { octave: 5, pitch_name: PitchName::B, accidental: Accidental::Natural, }),
+        n if n == LEFT_POINTER_82 | LEFT_POINTER =>
+            Some(Pitch { octave: 5, pitch_name: PitchName::B, accidental: Accidental::Natural, }),
+        // C6
+        n if n == LEFT_THUMB_81 | LEFT_POINTER_82 | LEFT_POINTER | RIGHT_POINTER =>
+            Some(Pitch { octave: 6, pitch_name: PitchName::C, accidental: Accidental::Natural, }),
+        n if n == LEFT_POINTER_82 | LEFT_POINTER | RIGHT_POINTER =>
+            Some(Pitch { octave: 6, pitch_name: PitchName::C, accidental: Accidental::Natural, }),
+        // C#6
+        n if n == LEFT_MIDDLE | LEFT_RING | RIGHT_POINTER | RIGHT_LITTLE_C =>
+            Some(Pitch { octave: 6, pitch_name: PitchName::C, accidental: Accidental::Sharp, }),
+        // D6
+        n if n == LEFT_POINTER_HALF | LEFT_MIDDLE | LEFT_RING | RIGHT_LITTLE_C =>
+            Some(Pitch { octave: 6, pitch_name: PitchName::D, accidental: Accidental::Natural, }),
+        n if n == LEFT_POINTER_HALF | LEFT_MIDDLE | LEFT_RING | RIGHT_RING | RIGHT_LITTLE_C =>
+            Some(Pitch { octave: 6, pitch_name: PitchName::D, accidental: Accidental::Natural, }),
+        // Eb6
+        n if n == LEFT_POINTER_HALF | LEFT_MIDDLE | LEFT_RING | LEFT_LITTLE_B | RIGHT_MIDDLE | RIGHT_RING =>
+            Some(Pitch { octave: 6, pitch_name: PitchName::E, accidental: Accidental::Flat, }),
+        n if n == LEFT_THUMB_83 | LEFT_POINTER_HALF | LEFT_MIDDLE | LEFT_RING | RIGHT_MIDDLE | RIGHT_RING =>
+            Some(Pitch { octave: 6, pitch_name: PitchName::E, accidental: Accidental::Flat, }),
+        // E6
+        n if n == LEFT_THUMB_83 | LEFT_POINTER_HALF | LEFT_MIDDLE | LEFT_RING | LEFT_LITTLE_GSHARP | RIGHT_MIDDLE | RIGHT_RING | RIGHT_LITTLE_EFLAT =>
+            Some(Pitch { octave: 6, pitch_name: PitchName::E, accidental: Accidental::Natural, }),
+        n if n == LEFT_THUMB_83 | LEFT_POINTER_HALF | LEFT_MIDDLE | LEFT_RING | RIGHT_POINTER_GSHARP | RIGHT_MIDDLE | RIGHT_RING | RIGHT_LITTLE_EFLAT =>
+            Some(Pitch { octave: 6, pitch_name: PitchName::E, accidental: Accidental::Natural, }),
+        n if n == LEFT_THUMB_83 | LEFT_POINTER_HALF | LEFT_MIDDLE | LEFT_RING | LEFT_LITTLE_GSHARP | LEFT_LITTLE_EFLAT | RIGHT_MIDDLE | RIGHT_RING =>
+            Some(Pitch { octave: 6, pitch_name: PitchName::E, accidental: Accidental::Natural, }),
+        // F6
+        n if n == LEFT_THUMB_83 | LEFT_POINTER_HALF | LEFT_MIDDLE | LEFT_LITTLE_GSHARP | RIGHT_MIDDLE | RIGHT_RING | RIGHT_LITTLE_EFLAT =>
+            Some(Pitch { octave: 6, pitch_name: PitchName::F, accidental: Accidental::Natural, }),
+        n if n == LEFT_THUMB_83 | LEFT_POINTER_HALF | LEFT_MIDDLE | RIGHT_POINTER_GSHARP | RIGHT_MIDDLE | RIGHT_RING | RIGHT_LITTLE_EFLAT =>
+            Some(Pitch { octave: 6, pitch_name: PitchName::F, accidental: Accidental::Natural, }),
+        n if n == LEFT_THUMB_83 | LEFT_POINTER_HALF | LEFT_MIDDLE | LEFT_LITTLE_GSHARP | LEFT_LITTLE_EFLAT | RIGHT_MIDDLE | RIGHT_RING =>
+            Some(Pitch { octave: 6, pitch_name: PitchName::F, accidental: Accidental::Natural, }),
+        // F#6
+        n if n == LEFT_THUMB_83 | LEFT_POINTER | LEFT_MIDDLE | RIGHT_POINTER | RIGHT_LITTLE_C =>
+            Some(Pitch { octave: 6, pitch_name: PitchName::F, accidental: Accidental::Sharp, }),
+        n if n == LEFT_THUMB_83 | LEFT_POINTER | LEFT_LITTLE_GSHARP | RIGHT_MIDDLE | RIGHT_RING | RIGHT_LITTLE_EFLAT =>
+            Some(Pitch { octave: 6, pitch_name: PitchName::F, accidental: Accidental::Sharp, }),
+        n if n == LEFT_THUMB_83 | LEFT_POINTER | LEFT_LITTLE_GSHARP | LEFT_LITTLE_EFLAT | RIGHT_MIDDLE | RIGHT_RING =>
+            Some(Pitch { octave: 6, pitch_name: PitchName::F, accidental: Accidental::Sharp, }),
+        // G6
+        n if n == LEFT_THUMB_83 | LEFT_POINTER | LEFT_RING | RIGHT_POINTER =>
+            Some(Pitch { octave: 6, pitch_name: PitchName::G, accidental: Accidental::Natural, }),
+        n if n == LEFT_THUMB_83 | LEFT_POINTER | LEFT_LITTLE_GSHARP | RIGHT_POINTER =>
+            Some(Pitch { octave: 6, pitch_name: PitchName::G, accidental: Accidental::Natural, }),
 
         _ => None,
     }
