@@ -1,5 +1,6 @@
 import { Key } from '@/oboe/fingering';
 
+/* eslint quote-props: 0 */
 export const DEFAULT_KEY_MAPPING = new Map<string, Key>(Object.entries({
   '0': Key.RightLittleEflat,
   'p': Key.RightLittleCsharp,
