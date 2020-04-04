@@ -12,7 +12,9 @@ export enum Accidental {
 
 export class Pitch {
   octave: number;
+
   pitchName: PitchName;
+
   accidental: Accidental;
 
   constructor(octave: number, pitchName: PitchName, accidental: Accidental) {
