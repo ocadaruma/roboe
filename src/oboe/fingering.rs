@@ -1,8 +1,11 @@
 //! Fingering and keys are based on Marigaux Lemaire
 
 use crate::music::note::*;
+use crate::wasm_bindgen::prelude::*;
 
-pub type Key = u32;
+pub type Key = i32;
+
+pub const EMPTY: Key = 0;
 
 pub const RIGHT_LITTLE_EFLAT   :Key = 1 << 0;
 pub const RIGHT_LITTLE_CSHARP  :Key = 1 << 1;
@@ -30,8 +33,9 @@ pub const LEFT_THUMB_81        :Key = 1 << 21;
 pub const LEFT_THUMB_83        :Key = 1 << 22;
 
 /// Convert a bit flag of key combination to pitch
-pub fn keys_to_pitch(combination: Key) -> Option<Pitch> {
-    match combination {
+#[wasm_bindgen]
+pub fn key_to_pitch(key: Key) -> Option<Pitch> {
+    match key {
         // Bb3
         n if n == LEFT_POINTER | LEFT_MIDDLE | LEFT_RING | LEFT_LITTLE_BFLAT | RIGHT_POINTER | RIGHT_MIDDLE | RIGHT_RING | RIGHT_LITTLE_C =>
             Some(Pitch { octave: 3, pitch_name: PitchName::B, accidental: Accidental::Flat, }),

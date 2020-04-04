@@ -4,6 +4,9 @@ version = "0.0.1"
 authors = ["ocadaruma <ocadaruma@gmail.com>"]
 edition = "2018"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+crate-type = ["cdylib", "rlib"]
 
 [dependencies]
+wasm-bindgen = "0.2.60"
+wee_alloc = "0.4.5"
