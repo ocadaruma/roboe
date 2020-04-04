@@ -1,22 +1,20 @@
+import {Breath} from "@/oboe/sound";
 <template>
   <div>{{ pitch }}</div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { Key, Fingering } from '@/oboe/fingering';
-import { Pitch } from '@/oboe/music';
+import { Fingering, Key } from '@/oboe/fingering';
+import { Breath, OboeSound } from '@/oboe/sound';
 import { DEFAULT_KEY_MAPPING } from '@/oboe/input';
-
-enum Breath {
-  ON, OFF,
-}
 
 @Component
 export default class Oboe extends Vue {
   private pitch: string | null = null;
   private fingering = 0;
   private breath = Breath.OFF;
+  private oboeSound = new OboeSound();
 
   private currentKeys = new Set<string>();
 
@@ -33,12 +31,18 @@ export default class Oboe extends Vue {
 
     if (key === ' ') {
       this.breath = Breath.ON;
+      this.oboeSound.breath(Breath.ON);
     }
 
     const oboeKey = this.inputToOboeKey(key);
     if (oboeKey) {
       this.fingering |= oboeKey;
-      this.pitch = new Fingering(this.fingering).pitch()?.format() || null;
+      const pitch = new Fingering(this.fingering).pitch();
+      this.pitch = pitch?.format() || null;
+
+      if (pitch) {
+        this.oboeSound.pitch(pitch);
+      }
     }
   }
 
@@ -48,12 +52,18 @@ export default class Oboe extends Vue {
 
     if (key === ' ') {
       this.breath = Breath.OFF;
+      this.oboeSound.breath(Breath.OFF);
     }
 
     const oboeKey = this.inputToOboeKey(key);
     if (oboeKey) {
       this.fingering ^= oboeKey;
-      this.pitch = new Fingering(this.fingering).pitch()?.format() || null;
+      const pitch = new Fingering(this.fingering).pitch();
+      this.pitch = pitch?.format() || null;
+
+      if (pitch) {
+        this.oboeSound.pitch(pitch);
+      }
     }
   }
 
@@ -65,6 +75,8 @@ export default class Oboe extends Vue {
   beforeDestroy(): void {
     window.removeEventListener('keydown', this.keydown);
     window.removeEventListener('keyup', this.keyup);
+
+    this.oboeSound.close();
   }
 }
 </script>
