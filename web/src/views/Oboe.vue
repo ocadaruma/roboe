@@ -22,49 +22,54 @@ export default class Oboe extends Vue {
     return DEFAULT_KEY_MAPPING.get(key);
   }
 
+  private updateSound() {
+    const pitch = new Fingering(this.fingering).pitch() || null;
+
+    if (this.breath === Breath.ON && pitch !== null) {
+      this.oboeSound.pitch(pitch);
+      this.oboeSound.breath(Breath.ON);
+      this.pitch = new Fingering(this.fingering).pitch()?.format() || null;
+    } else {
+      this.oboeSound.breath(Breath.OFF);
+      this.pitch = null;
+    }
+  }
+
   private keydown(ev: KeyboardEvent): void {
     const { key } = ev;
     if (this.currentKeys.has(key)) {
       return;
     }
     this.currentKeys.add(key);
+    console.log(this.currentKeys);
 
     if (key === ' ') {
       this.breath = Breath.ON;
-      this.oboeSound.breath(Breath.ON);
-    }
-
-    const oboeKey = this.inputToOboeKey(key);
-    if (oboeKey) {
-      this.fingering |= oboeKey;
-      const pitch = new Fingering(this.fingering).pitch();
-      this.pitch = pitch?.format() || null;
-
-      if (pitch) {
-        this.oboeSound.pitch(pitch);
+    } else {
+      const oboeKey = this.inputToOboeKey(key);
+      if (oboeKey) {
+        this.fingering |= oboeKey;
       }
     }
+
+    this.updateSound();
   }
 
   private keyup(ev: KeyboardEvent): void {
     const { key } = ev;
     this.currentKeys.delete(key);
+    console.log(this.currentKeys);
 
     if (key === ' ') {
       this.breath = Breath.OFF;
-      this.oboeSound.breath(Breath.OFF);
-    }
-
-    const oboeKey = this.inputToOboeKey(key);
-    if (oboeKey) {
-      this.fingering ^= oboeKey;
-      const pitch = new Fingering(this.fingering).pitch();
-      this.pitch = pitch?.format() || null;
-
-      if (pitch) {
-        this.oboeSound.pitch(pitch);
+    } else {
+      const oboeKey = this.inputToOboeKey(key);
+      if (oboeKey) {
+        this.fingering ^= oboeKey;
       }
     }
+
+    this.updateSound();
   }
 
   created(): void {

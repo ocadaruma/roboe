@@ -19,6 +19,7 @@ export class OboeSound {
     const oscillator = this.audioContext.createOscillator();
     const gainNode = this.audioContext.createGain();
 
+    oscillator.type = 'square';
     oscillator.connect(gainNode);
     gainNode.connect(this.audioContext.destination);
 
