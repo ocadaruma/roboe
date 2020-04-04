@@ -7,17 +7,17 @@ use crate::wasm_bindgen::prelude::*;
 pub mod fingering;
 
 #[wasm_bindgen]
-#[derive(Copy, Clone, Eq, PartialEq)]
+#[derive(Copy, Clone, PartialOrd, PartialEq, Debug)]
 pub struct Breath {
     /// 0 means not blowing
     pub velocity: u8,
 }
 
 #[wasm_bindgen]
-#[derive(Copy, Clone, Eq, PartialEq)]
+#[derive(Copy, Clone, PartialOrd, PartialEq, Debug)]
 pub struct Oboe {
     /// Current fingering
-    fingers: Key,
+    fingering: Fingering,
     /// Current breath
     breath: Breath,
 }
@@ -26,26 +26,26 @@ pub struct Oboe {
 impl Oboe {
     pub fn new() -> Oboe {
         Oboe {
-            fingers: EMPTY,
+            fingering: Fingering::from_bitflags(0),
             breath: Breath { velocity: 0, },
         }
     }
 
-    pub fn with_fingers(&self, fingers: Key) -> Oboe {
+    pub fn with_fingers(&self, fingering: Fingering) -> Oboe {
         Oboe {
-            fingers,
+            fingering,
             breath: self.breath,
         }
     }
 
     pub fn with_breath(&self, breath: Breath) -> Oboe {
         Oboe {
-            fingers: self.fingers,
+            fingering: self.fingering,
             breath,
         }
     }
 
     pub fn pitch(&self) -> Option<Pitch> {
-        key_to_pitch(self.fingers)
+        fingering_to_pitch(self.fingering)
     }
 }

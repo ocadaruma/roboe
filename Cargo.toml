@@ -3,6 +3,9 @@ name = "roboe"
 version = "0.0.1"
 authors = ["ocadaruma <ocadaruma@gmail.com>"]
 edition = "2018"
+description = "Robot oboe"
+license = "Apache-2.0"
+repository = "https://github.com/ocadaruma/roboe.git"
 
 [lib]
 crate-type = ["cdylib", "rlib"]

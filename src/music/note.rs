@@ -8,14 +8,14 @@ pub const MIDDLE_C: Pitch = Pitch {
 
 #[repr(u8)]
 #[wasm_bindgen]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, PartialOrd, PartialEq, Debug)]
 pub enum PitchName {
     C, D, E, F, G, A, B
 }
 
 #[repr(u8)]
 #[wasm_bindgen]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, PartialOrd, PartialEq, Debug)]
 pub enum Accidental {
     DoubleFlat,
     Flat,
@@ -25,8 +25,18 @@ pub enum Accidental {
 }
 
 #[wasm_bindgen]
+#[derive(Copy, Clone, PartialOrd, PartialEq, Debug)]
 pub struct Pitch {
     pub octave: i8,
     pub pitch_name: PitchName,
     pub accidental: Accidental,
+}
+
+#[wasm_bindgen]
+impl Pitch {
+    pub fn new(octave: i8, pitch_name: PitchName, accidental: Accidental) -> Pitch {
+        Pitch {
+            octave, pitch_name, accidental,
+        }
+    }
 }
