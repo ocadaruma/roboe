@@ -1,5 +1,7 @@
 //! roboe libs
 
+pub mod audio;
+pub mod input;
 pub mod music;
 pub mod oboe;
 

@@ -24,6 +24,7 @@ pub struct Oboe {
 
 #[wasm_bindgen]
 impl Oboe {
+    #[wasm_bindgen(constructor)]
     pub fn new() -> Oboe {
         Oboe {
             fingering: Fingering::from_bitflags(0),
@@ -31,6 +32,7 @@ impl Oboe {
         }
     }
 
+    #[wasm_bindgen(js_name = withFingers)]
     pub fn with_fingers(&self, fingering: Fingering) -> Oboe {
         Oboe {
             fingering,
@@ -38,6 +40,7 @@ impl Oboe {
         }
     }
 
+    #[wasm_bindgen(js_name = withBreath)]
     pub fn with_breath(&self, breath: Breath) -> Oboe {
         Oboe {
             fingering: self.fingering,
@@ -46,6 +49,6 @@ impl Oboe {
     }
 
     pub fn pitch(&self) -> Option<Pitch> {
-        fingering_to_pitch(self.fingering)
+        self.fingering.pitch()
     }
 }

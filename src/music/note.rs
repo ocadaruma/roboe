@@ -34,6 +34,7 @@ pub struct Pitch {
 
 #[wasm_bindgen]
 impl Pitch {
+    #[wasm_bindgen(constructor)]
     pub fn new(octave: i8, pitch_name: PitchName, accidental: Accidental) -> Pitch {
         Pitch {
             octave, pitch_name, accidental,
