@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include <MIDI.h>
 #include "musical.h"
 #include "oboe.h"
 

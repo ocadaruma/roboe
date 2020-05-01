@@ -954,6 +954,10 @@ function(find_arduino_libraries VAR_NAME SRCS ARDLIBS)
                                  DIRECTORY     # Property Scope
                                  PROPERTY LINK_DIRECTORIES)
                     foreach(LIB_SEARCH_PATH ${include_dirs} ${LIBRARY_SEARCH_PATH} ${ARDUINO_LIBRARIES_PATH} ${${ARDUINO_PLATFORM}_LIBRARIES_PATH} ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/libraries ${ARDUINO_EXTRA_LIBRARIES_PATH})
+                        if(EXISTS ${LIB_SEARCH_PATH}/src/${CMAKE_MATCH_1})
+                            list(APPEND ARDUINO_LIBS ${LIB_SEARCH_PATH}/src)
+                            break()
+                        endif()
                         if(EXISTS ${LIB_SEARCH_PATH}/${INCLUDE_NAME}/${CMAKE_MATCH_1})
                             list(APPEND ARDUINO_LIBS ${LIB_SEARCH_PATH}/${INCLUDE_NAME})
                             break()
@@ -1091,7 +1095,7 @@ function(setup_arduino_libraries VAR_NAME BOARD_ID SRCS ARDLIBS COMPILE_FLAGS LI
     set(LIB_TARGETS)
     set(LIB_INCLUDES)
 
-    find_arduino_libraries(TARGET_LIBS "${SRCS}" ARDLIBS)
+    find_arduino_libraries(TARGET_LIBS "${SRCS}" "${ARDLIBS}")
     foreach(TARGET_LIB ${TARGET_LIBS})
         # Create static library instead of returning sources
         setup_arduino_library(LIB_DEPS ${BOARD_ID} ${TARGET_LIB} "${COMPILE_FLAGS}" "${LINK_FLAGS}")
