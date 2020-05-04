@@ -1125,7 +1125,6 @@ endfunction()
 #
 #=============================================================================#
 function(setup_arduino_target TARGET_NAME BOARD_ID ALL_SRCS ALL_LIBS COMPILE_FLAGS LINK_FLAGS MANUAL)
-
     add_executable(${TARGET_NAME} ${ALL_SRCS})
     set_target_properties(${TARGET_NAME} PROPERTIES SUFFIX ".elf")
 
@@ -1810,7 +1809,7 @@ function(SETUP_ARDUINO_SKETCH TARGET_NAME SKETCH_PATH OUTPUT_VAR)
 
         # Find all sketch files
         file(GLOB SKETCH_SOURCES ${SKETCH_PATH}/*.pde ${SKETCH_PATH}/*.ino)
-        set(ALL_SRCS ${SKETCH_SOURCES})
+        set(${OUTPUT_VAR} ${${OUTPUT_VAR}} ${SKETCH_SOURCES})
 
         list(REMOVE_ITEM SKETCH_SOURCES ${MAIN_SKETCH})
         list(SORT SKETCH_SOURCES)
@@ -1842,7 +1841,7 @@ endfunction()
 # generate_cpp_from_sketch(MAIN_SKETCH_PATH SKETCH_SOURCES SKETCH_CPP)
 #
 #         MAIN_SKETCH_PATH - Main sketch file path
-#         SKETCH_SOURCES   - Setch source paths
+#         SKETCH_SOURCES   - Sketch source paths
 #         SKETCH_CPP       - Name of file to generate
 #
 # Generate C++ source file from Arduino sketch files.

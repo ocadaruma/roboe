@@ -3,46 +3,39 @@
 
 #include <Arduino.h>
 
-typedef enum {
-    PITCH_NAME_C,
-    PITCH_NAME_D,
-    PITCH_NAME_E,
-    PITCH_NAME_F,
-    PITCH_NAME_G,
-    PITCH_NAME_A,
-    PITCH_NAME_B,
-} PitchName;
-
-typedef enum {
-    ACCIDENTAL_DOUBLE_FLAT,
-    ACCIDENTAL_FLAT,
-    ACCIDENTAL_NATURAL,
-    ACCIDENTAL_SHARP,
-    ACCIDENTAL_DOUBLE_SHARP,
-} Accidental;
-
-typedef struct {
-    int octave;
-    PitchName pitchName;
-    Accidental accidental;
-} Pitch;
-
-static const Pitch PITCH_UNDEFINED = {
-        .octave = -1,
-        .pitchName = PITCH_NAME_C,
-        .accidental = ACCIDENTAL_DOUBLE_FLAT,
+enum class PitchName {
+    C, D, E, F, G, A, B,
 };
 
-static const Pitch MIDDLE_C = {
-        .octave = 4,
-        .pitchName = PITCH_NAME_C,
-        .accidental = ACCIDENTAL_NATURAL,
+enum class Accidental {
+    DOUBLE_FLAT,
+    FLAT,
+    NATURAL,
+    SHARP,
+    DOUBLE_SHARP,
 };
 
-bool pitchEquals(Pitch left, Pitch right) {
-    return left.octave == right.octave &&
-           left.pitchName == right.pitchName &&
-           left.accidental == right.accidental;
-}
+class Pitch {
+public:
+    constexpr Pitch(int octave, PitchName pitchName, Accidental accidental):
+            _octave(octave), _pitchName(pitchName), _accidental(accidental) {
+    }
+
+    void print() const;
+
+    bool operator==(const Pitch& other) const {
+        return this->_octave == other._octave &&
+               this->_pitchName == other._pitchName &&
+               this->_accidental == other._accidental;
+    }
+
+private:
+    int _octave;
+    PitchName  _pitchName;
+    Accidental _accidental;
+};
+
+constexpr Pitch PITCH_UNDEFINED { -1, PitchName::C, Accidental::NATURAL };
+constexpr Pitch PITCH_MIDDLE_C { 4, PitchName::C, Accidental::NATURAL };
 
 #endif //ROBOE_MUSICAL_H
