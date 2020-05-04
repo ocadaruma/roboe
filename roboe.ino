@@ -77,5 +77,10 @@ void loop() {
     int breathReading = constrain(analogRead(A1) - BREATH_CALIBRATION, 0, BREATH_MAX_READING - BREATH_CALIBRATION);
     int breathIntensity = map(breathReading, 0, BREATH_MAX_READING - BREATH_CALIBRATION, 0, 127);
 
+    // adjust sensitivity around 0 to emulate real oboe behavior
+    if (breathIntensity < 10) {
+        breathIntensity = 0;
+    }
+
     ROBOE.update(breathIntensity, keyCombination);
 }
