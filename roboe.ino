@@ -28,8 +28,10 @@ MIDI_CREATE_DEFAULT_INSTANCE();
 Roboe ROBOE(MIDI);
 
 void setup() {
+    MIDI.begin(1);
+    MIDI.turnThruOff();
+
     delay(200);
-    Serial.begin(9600);
 
     // initialize breath controller
     BREATH_CALIBRATION = analogRead(SENSOR_PIN);

@@ -21,7 +21,54 @@ public:
             _octave(octave), _pitchName(pitchName), _accidental(accidental) {
     }
 
-    void print() const;
+    byte toMidiNoteNumber() const {
+        // MIDI note number of Middle C (C4) is 60
+        // Hence MIDi note number of C0 (octave=0, pitchName=C, accidental=NATURAL) is 12
+        byte number = 12;
+
+        number += (_octave * 12);
+        switch (_pitchName) {
+            case PitchName::C:
+                break;
+            case PitchName::D:
+                number += 2;
+                break;
+            case PitchName::E:
+                number += 4;
+                break;
+            case PitchName::F:
+                number += 5;
+                break;
+            case PitchName::G:
+                number += 7;
+                break;
+            case PitchName::A:
+                number += 9;
+                break;
+            case PitchName::B:
+                number += 11;
+                break;
+        }
+
+        switch (_accidental) {
+            case Accidental::DOUBLE_FLAT:
+                number -= 2;
+                break;
+            case Accidental::FLAT:
+                number -= 1;
+                break;
+            case Accidental::NATURAL:
+                break;
+            case Accidental::SHARP:
+                number += 1;
+                break;
+            case Accidental::DOUBLE_SHARP:
+                number += 2;
+                break;
+        }
+
+        return number;
+    }
 
     bool operator==(const Pitch& other) const {
         return this->_octave == other._octave &&
