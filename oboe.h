@@ -46,28 +46,22 @@ public:
     constexpr OboeKeys(): _bitFlags(0UL) {
     }
 
+    constexpr unsigned long bitFlags() const {
+        return _bitFlags;
+    }
+
     Pitch toPitch() const;
 
-    OboeKeys operator|(const OboeKey &key) const {
+    constexpr OboeKeys operator|(const OboeKey &key) const {
         return OboeKeys(this->_bitFlags | static_cast<unsigned long>(key));
     }
 
-    OboeKeys operator-(const OboeKey &key) const {
+    constexpr OboeKeys operator-(const OboeKey &key) const {
         return OboeKeys(this->_bitFlags & ~(static_cast<unsigned long>(key)));
-    }
-
-    bool operator==(const OboeKeys &other) const {
-        return this->_bitFlags == other._bitFlags;
-    }
-
-    bool operator==(const OboeKey &key) const {
-        return this->_bitFlags == static_cast<unsigned long>(key);
     }
 
 private:
     unsigned long _bitFlags;
 };
-
-OboeKeys operator|(const OboeKey&, const OboeKey&);
 
 #endif //ROBOE_OBOE_H
