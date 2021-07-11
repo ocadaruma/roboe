@@ -1,0 +1,905 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L eec:MPXV5004GC6U U3
+U 1 1 60EA10D5
+P 8950 4950
+F 0 "U3" H 9500 5215 50  0000 C CNN
+F 1 "MPXV5004GC6U" H 9500 5124 50  0000 C CNN
+F 2 "eec:NXP-MPXV5004GC6U-0" H 8950 5350 50  0001 L CNN
+F 3 "https://upverter.com/datasheet/d269c98cac099c88a29fe7fc9ca0678e4ee79de4.pdf" H 8950 5450 50  0001 L CNN
+F 4 "IC" H 8950 5550 50  0001 L CNN "category"
+F 5 "MPXV5004GC6U-ND" H 8950 5650 50  0001 L CNN "digikey description"
+F 6 "SENSOR GAUGE PRESS 0.57 PSI MAX" H 8950 5750 50  0001 L CNN "digikey part number"
+F 7 "yes" H 8950 5850 50  0001 L CNN "lead free"
+F 8 "f57f256208668aa5" H 8950 5950 50  0001 L CNN "library id"
+F 9 "NXP" H 8950 6050 50  0001 L CNN "manufacturer"
+F 10 "841-MPXV5004GC6U" H 8950 6150 50  0001 L CNN "mouser part number"
+F 11 "8-SMD" H 8950 6250 50  0001 L CNN "package"
+F 12 "yes" H 8950 6350 50  0001 L CNN "rohs"
+F 13 "+85°C" H 8950 6450 50  0001 L CNN "temperature range high"
+F 14 "0°C" H 8950 6550 50  0001 L CNN "temperature range low"
+	1    8950 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Optical:QTR-1RC U1
+U 1 1 60EA7843
+P 6850 5250
+F 0 "U1" V 6746 5778 50  0000 L CNN
+F 1 "QTR-1RC" V 6837 5778 50  0000 L CNN
+F 2 "" H 6650 5800 50  0001 C CNN
+F 3 "" H 6650 5800 50  0001 C CNN
+	1    6850 5250
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 60EC3A99
+P 2000 2000
+F 0 "SW1" V 1954 2148 50  0000 L CNN
+F 1 "SW_Push" V 2045 2148 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 2000 2200 50  0001 C CNN
+F 3 "~" H 2000 2200 50  0001 C CNN
+	1    2000 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D1
+U 1 1 60EC4C9B
+P 2150 2200
+F 0 "D1" H 2150 2417 50  0000 C CNN
+F 1 "1N4148W" H 2150 2326 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 2150 2025 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 2150 2200 50  0001 C CNN
+	1    2150 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW6
+U 1 1 60EC6E90
+P 2500 2000
+F 0 "SW6" V 2454 2148 50  0000 L CNN
+F 1 "SW_Push" V 2545 2148 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 2500 2200 50  0001 C CNN
+F 3 "~" H 2500 2200 50  0001 C CNN
+	1    2500 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D6
+U 1 1 60EC6E96
+P 2650 2200
+F 0 "D6" H 2650 2417 50  0000 C CNN
+F 1 "1N4148W" H 2650 2326 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 2650 2025 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 2650 2200 50  0001 C CNN
+	1    2650 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW11
+U 1 1 60EC74CE
+P 2950 2000
+F 0 "SW11" V 2904 2148 50  0000 L CNN
+F 1 "SW_Push" V 2995 2148 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 2950 2200 50  0001 C CNN
+F 3 "~" H 2950 2200 50  0001 C CNN
+	1    2950 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D11
+U 1 1 60EC74D4
+P 3100 2200
+F 0 "D11" H 3100 2417 50  0000 C CNN
+F 1 "1N4148W" H 3100 2326 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 3100 2025 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 3100 2200 50  0001 C CNN
+	1    3100 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW16
+U 1 1 60EC80DA
+P 3400 2000
+F 0 "SW16" V 3354 2148 50  0000 L CNN
+F 1 "SW_Push" V 3445 2148 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 3400 2200 50  0001 C CNN
+F 3 "~" H 3400 2200 50  0001 C CNN
+	1    3400 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D16
+U 1 1 60EC80E0
+P 3550 2200
+F 0 "D16" H 3550 2417 50  0000 C CNN
+F 1 "1N4148W" H 3550 2326 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 3550 2025 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 3550 2200 50  0001 C CNN
+	1    3550 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW21
+U 1 1 60EC9224
+P 3850 2000
+F 0 "SW21" V 3804 2148 50  0000 L CNN
+F 1 "SW_Push" V 3895 2148 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 3850 2200 50  0001 C CNN
+F 3 "~" H 3850 2200 50  0001 C CNN
+	1    3850 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D21
+U 1 1 60EC922A
+P 4000 2200
+F 0 "D21" H 4000 2417 50  0000 C CNN
+F 1 "1N4148W" H 4000 2326 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 4000 2025 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 4000 2200 50  0001 C CNN
+	1    4000 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW2
+U 1 1 60ECD1F2
+P 2000 2800
+F 0 "SW2" V 1954 2948 50  0000 L CNN
+F 1 "SW_Push" V 2045 2948 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 2000 3000 50  0001 C CNN
+F 3 "~" H 2000 3000 50  0001 C CNN
+	1    2000 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D2
+U 1 1 60ECD1F8
+P 2150 3000
+F 0 "D2" H 2150 3217 50  0000 C CNN
+F 1 "1N4148W" H 2150 3126 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 2150 2825 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 2150 3000 50  0001 C CNN
+	1    2150 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW7
+U 1 1 60ECD1FE
+P 2500 2800
+F 0 "SW7" V 2454 2948 50  0000 L CNN
+F 1 "SW_Push" V 2545 2948 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 2500 3000 50  0001 C CNN
+F 3 "~" H 2500 3000 50  0001 C CNN
+	1    2500 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D7
+U 1 1 60ECD204
+P 2650 3000
+F 0 "D7" H 2650 3217 50  0000 C CNN
+F 1 "1N4148W" H 2650 3126 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 2650 2825 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 2650 3000 50  0001 C CNN
+	1    2650 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW12
+U 1 1 60ECD20A
+P 2950 2800
+F 0 "SW12" V 2904 2948 50  0000 L CNN
+F 1 "SW_Push" V 2995 2948 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 2950 3000 50  0001 C CNN
+F 3 "~" H 2950 3000 50  0001 C CNN
+	1    2950 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D12
+U 1 1 60ECD210
+P 3100 3000
+F 0 "D12" H 3100 3217 50  0000 C CNN
+F 1 "1N4148W" H 3100 3126 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 3100 2825 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 3100 3000 50  0001 C CNN
+	1    3100 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW17
+U 1 1 60ECD216
+P 3400 2800
+F 0 "SW17" V 3354 2948 50  0000 L CNN
+F 1 "SW_Push" V 3445 2948 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 3400 3000 50  0001 C CNN
+F 3 "~" H 3400 3000 50  0001 C CNN
+	1    3400 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D17
+U 1 1 60ECD21C
+P 3550 3000
+F 0 "D17" H 3550 3217 50  0000 C CNN
+F 1 "1N4148W" H 3550 3126 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 3550 2825 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 3550 3000 50  0001 C CNN
+	1    3550 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW22
+U 1 1 60ECD222
+P 3850 2800
+F 0 "SW22" V 3804 2948 50  0000 L CNN
+F 1 "SW_Push" V 3895 2948 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 3850 3000 50  0001 C CNN
+F 3 "~" H 3850 3000 50  0001 C CNN
+	1    3850 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D22
+U 1 1 60ECD228
+P 4000 3000
+F 0 "D22" H 4000 3217 50  0000 C CNN
+F 1 "1N4148W" H 4000 3126 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 4000 2825 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 4000 3000 50  0001 C CNN
+	1    4000 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW3
+U 1 1 60ED0D80
+P 2000 3600
+F 0 "SW3" V 1954 3748 50  0000 L CNN
+F 1 "SW_Push" V 2045 3748 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 2000 3800 50  0001 C CNN
+F 3 "~" H 2000 3800 50  0001 C CNN
+	1    2000 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D3
+U 1 1 60ED0D86
+P 2150 3800
+F 0 "D3" H 2150 4017 50  0000 C CNN
+F 1 "1N4148W" H 2150 3926 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 2150 3625 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 2150 3800 50  0001 C CNN
+	1    2150 3800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW8
+U 1 1 60ED0D8C
+P 2500 3600
+F 0 "SW8" V 2454 3748 50  0000 L CNN
+F 1 "SW_Push" V 2545 3748 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 2500 3800 50  0001 C CNN
+F 3 "~" H 2500 3800 50  0001 C CNN
+	1    2500 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D8
+U 1 1 60ED0D92
+P 2650 3800
+F 0 "D8" H 2650 4017 50  0000 C CNN
+F 1 "1N4148W" H 2650 3926 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 2650 3625 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 2650 3800 50  0001 C CNN
+	1    2650 3800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW13
+U 1 1 60ED0D98
+P 2950 3600
+F 0 "SW13" V 2904 3748 50  0000 L CNN
+F 1 "SW_Push" V 2995 3748 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 2950 3800 50  0001 C CNN
+F 3 "~" H 2950 3800 50  0001 C CNN
+	1    2950 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D13
+U 1 1 60ED0D9E
+P 3100 3800
+F 0 "D13" H 3100 4017 50  0000 C CNN
+F 1 "1N4148W" H 3100 3926 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 3100 3625 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 3100 3800 50  0001 C CNN
+	1    3100 3800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW18
+U 1 1 60ED0DA4
+P 3400 3600
+F 0 "SW18" V 3354 3748 50  0000 L CNN
+F 1 "SW_Push" V 3445 3748 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 3400 3800 50  0001 C CNN
+F 3 "~" H 3400 3800 50  0001 C CNN
+	1    3400 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D18
+U 1 1 60ED0DAA
+P 3550 3800
+F 0 "D18" H 3550 4017 50  0000 C CNN
+F 1 "1N4148W" H 3550 3926 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 3550 3625 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 3550 3800 50  0001 C CNN
+	1    3550 3800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW23
+U 1 1 60ED0DB0
+P 3850 3600
+F 0 "SW23" V 3804 3748 50  0000 L CNN
+F 1 "SW_Push" V 3895 3748 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 3850 3800 50  0001 C CNN
+F 3 "~" H 3850 3800 50  0001 C CNN
+	1    3850 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D23
+U 1 1 60ED0DB6
+P 4000 3800
+F 0 "D23" H 4000 4017 50  0000 C CNN
+F 1 "1N4148W" H 4000 3926 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 4000 3625 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 4000 3800 50  0001 C CNN
+	1    4000 3800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW4
+U 1 1 60ED4D88
+P 2000 4350
+F 0 "SW4" V 1954 4498 50  0000 L CNN
+F 1 "SW_Push" V 2045 4498 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 2000 4550 50  0001 C CNN
+F 3 "~" H 2000 4550 50  0001 C CNN
+	1    2000 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D4
+U 1 1 60ED4D8E
+P 2150 4550
+F 0 "D4" H 2150 4767 50  0000 C CNN
+F 1 "1N4148W" H 2150 4676 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 2150 4375 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 2150 4550 50  0001 C CNN
+	1    2150 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW9
+U 1 1 60ED4D94
+P 2500 4350
+F 0 "SW9" V 2454 4498 50  0000 L CNN
+F 1 "SW_Push" V 2545 4498 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 2500 4550 50  0001 C CNN
+F 3 "~" H 2500 4550 50  0001 C CNN
+	1    2500 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D9
+U 1 1 60ED4D9A
+P 2650 4550
+F 0 "D9" H 2650 4767 50  0000 C CNN
+F 1 "1N4148W" H 2650 4676 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 2650 4375 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 2650 4550 50  0001 C CNN
+	1    2650 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW14
+U 1 1 60ED4DA0
+P 2950 4350
+F 0 "SW14" V 2904 4498 50  0000 L CNN
+F 1 "SW_Push" V 2995 4498 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 2950 4550 50  0001 C CNN
+F 3 "~" H 2950 4550 50  0001 C CNN
+	1    2950 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D14
+U 1 1 60ED4DA6
+P 3100 4550
+F 0 "D14" H 3100 4767 50  0000 C CNN
+F 1 "1N4148W" H 3100 4676 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 3100 4375 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 3100 4550 50  0001 C CNN
+	1    3100 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW19
+U 1 1 60ED4DAC
+P 3400 4350
+F 0 "SW19" V 3354 4498 50  0000 L CNN
+F 1 "SW_Push" V 3445 4498 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 3400 4550 50  0001 C CNN
+F 3 "~" H 3400 4550 50  0001 C CNN
+	1    3400 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D19
+U 1 1 60ED4DB2
+P 3550 4550
+F 0 "D19" H 3550 4767 50  0000 C CNN
+F 1 "1N4148W" H 3550 4676 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 3550 4375 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 3550 4550 50  0001 C CNN
+	1    3550 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW24
+U 1 1 60ED4DB8
+P 3850 4350
+F 0 "SW24" V 3804 4498 50  0000 L CNN
+F 1 "SW_Push" V 3895 4498 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 3850 4550 50  0001 C CNN
+F 3 "~" H 3850 4550 50  0001 C CNN
+	1    3850 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D24
+U 1 1 60ED4DBE
+P 4000 4550
+F 0 "D24" H 4000 4767 50  0000 C CNN
+F 1 "1N4148W" H 4000 4676 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 4000 4375 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 4000 4550 50  0001 C CNN
+	1    4000 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW5
+U 1 1 60ED9862
+P 2000 5100
+F 0 "SW5" V 1954 5248 50  0000 L CNN
+F 1 "SW_Push" V 2045 5248 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 2000 5300 50  0001 C CNN
+F 3 "~" H 2000 5300 50  0001 C CNN
+	1    2000 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D5
+U 1 1 60ED9868
+P 2150 5300
+F 0 "D5" H 2150 5517 50  0000 C CNN
+F 1 "1N4148W" H 2150 5426 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 2150 5125 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 2150 5300 50  0001 C CNN
+	1    2150 5300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW10
+U 1 1 60ED986E
+P 2500 5100
+F 0 "SW10" V 2454 5248 50  0000 L CNN
+F 1 "SW_Push" V 2545 5248 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 2500 5300 50  0001 C CNN
+F 3 "~" H 2500 5300 50  0001 C CNN
+	1    2500 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D10
+U 1 1 60ED9874
+P 2650 5300
+F 0 "D10" H 2650 5517 50  0000 C CNN
+F 1 "1N4148W" H 2650 5426 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 2650 5125 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 2650 5300 50  0001 C CNN
+	1    2650 5300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW15
+U 1 1 60ED987A
+P 2950 5100
+F 0 "SW15" V 2904 5248 50  0000 L CNN
+F 1 "SW_Push" V 2995 5248 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 2950 5300 50  0001 C CNN
+F 3 "~" H 2950 5300 50  0001 C CNN
+	1    2950 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D15
+U 1 1 60ED9880
+P 3100 5300
+F 0 "D15" H 3100 5517 50  0000 C CNN
+F 1 "1N4148W" H 3100 5426 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 3100 5125 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 3100 5300 50  0001 C CNN
+	1    3100 5300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW20
+U 1 1 60ED9886
+P 3400 5100
+F 0 "SW20" V 3354 5248 50  0000 L CNN
+F 1 "SW_Push" V 3445 5248 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 3400 5300 50  0001 C CNN
+F 3 "~" H 3400 5300 50  0001 C CNN
+	1    3400 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D20
+U 1 1 60ED988C
+P 3550 5300
+F 0 "D20" H 3550 5517 50  0000 C CNN
+F 1 "1N4148W" H 3550 5426 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 3550 5125 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 3550 5300 50  0001 C CNN
+	1    3550 5300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Push SW25
+U 1 1 60ED9892
+P 3850 5100
+F 0 "SW25" V 3804 5248 50  0000 L CNN
+F 1 "SW_Push" V 3895 5248 50  0000 L CNN
+F 2 "keyswitches:SW_PG1350_reversible" H 3850 5300 50  0001 C CNN
+F 3 "~" H 3850 5300 50  0001 C CNN
+	1    3850 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148W D25
+U 1 1 60ED9898
+P 4000 5300
+F 0 "D25" H 4000 5517 50  0000 C CNN
+F 1 "1N4148W" H 4000 5426 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 4000 5125 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 4000 5300 50  0001 C CNN
+	1    4000 5300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2000 1800 2500 1800
+Wire Wire Line
+	5750 1800 5750 2850
+Wire Wire Line
+	5750 2850 7150 2850
+Connection ~ 2500 1800
+Wire Wire Line
+	2500 1800 2950 1800
+Connection ~ 2950 1800
+Wire Wire Line
+	2950 1800 3400 1800
+Connection ~ 3400 1800
+Wire Wire Line
+	3400 1800 3850 1800
+Connection ~ 3850 1800
+Wire Wire Line
+	3850 1800 5750 1800
+Wire Wire Line
+	2000 2600 2500 2600
+Wire Wire Line
+	5650 2600 5650 2950
+Wire Wire Line
+	5650 2950 7150 2950
+Connection ~ 2500 2600
+Wire Wire Line
+	2500 2600 2950 2600
+Connection ~ 2950 2600
+Wire Wire Line
+	2950 2600 3400 2600
+Connection ~ 3400 2600
+Wire Wire Line
+	3400 2600 3850 2600
+Connection ~ 3850 2600
+Wire Wire Line
+	3850 2600 5650 2600
+Wire Wire Line
+	2000 3400 2500 3400
+Wire Wire Line
+	5650 3400 5650 3050
+Wire Wire Line
+	5650 3050 7150 3050
+Connection ~ 2500 3400
+Wire Wire Line
+	2500 3400 2950 3400
+Connection ~ 2950 3400
+Wire Wire Line
+	2950 3400 3400 3400
+Connection ~ 3400 3400
+Wire Wire Line
+	3400 3400 3850 3400
+Connection ~ 3850 3400
+Wire Wire Line
+	3850 3400 5650 3400
+Wire Wire Line
+	2000 4150 2500 4150
+Wire Wire Line
+	5750 4150 5750 3150
+Wire Wire Line
+	5750 3150 7150 3150
+Connection ~ 2500 4150
+Wire Wire Line
+	2500 4150 2950 4150
+Connection ~ 2950 4150
+Wire Wire Line
+	2950 4150 3400 4150
+Connection ~ 3400 4150
+Wire Wire Line
+	3400 4150 3850 4150
+Connection ~ 3850 4150
+Wire Wire Line
+	3850 4150 5750 4150
+Wire Wire Line
+	2000 4900 2500 4900
+Wire Wire Line
+	5850 4900 5850 3250
+Wire Wire Line
+	5850 3250 7150 3250
+Connection ~ 2500 4900
+Wire Wire Line
+	2500 4900 2950 4900
+Connection ~ 2950 4900
+Wire Wire Line
+	2950 4900 3400 4900
+Connection ~ 3400 4900
+Wire Wire Line
+	3400 4900 3850 4900
+Connection ~ 3850 4900
+Wire Wire Line
+	3850 4900 5850 4900
+Wire Wire Line
+	2300 1300 6950 1300
+Wire Wire Line
+	6950 1300 6950 2250
+Wire Wire Line
+	6950 2250 7150 2250
+Wire Wire Line
+	2300 2200 2300 1300
+Connection ~ 2300 2200
+Wire Wire Line
+	2300 3000 2300 2200
+Connection ~ 2300 3000
+Wire Wire Line
+	2300 3800 2300 3000
+Connection ~ 2300 3800
+Wire Wire Line
+	2300 5300 2300 4550
+Wire Wire Line
+	2300 4550 2300 3800
+Connection ~ 2300 4550
+Wire Wire Line
+	2800 5300 2800 4550
+Wire Wire Line
+	2800 1400 6850 1400
+Wire Wire Line
+	6850 1400 6850 2150
+Wire Wire Line
+	6850 2150 7150 2150
+Connection ~ 2800 2200
+Wire Wire Line
+	2800 2200 2800 1400
+Connection ~ 2800 3000
+Wire Wire Line
+	2800 3000 2800 2200
+Connection ~ 2800 3800
+Wire Wire Line
+	2800 3800 2800 3000
+Connection ~ 2800 4550
+Wire Wire Line
+	2800 4550 2800 3800
+Wire Wire Line
+	3250 5300 3250 4550
+Wire Wire Line
+	3250 1500 6750 1500
+Wire Wire Line
+	6750 1500 6750 2550
+Wire Wire Line
+	6750 2550 7150 2550
+Connection ~ 3250 2200
+Wire Wire Line
+	3250 2200 3250 1500
+Connection ~ 3250 3000
+Wire Wire Line
+	3250 3000 3250 2200
+Connection ~ 3250 3800
+Wire Wire Line
+	3250 3800 3250 3000
+Connection ~ 3250 4550
+Wire Wire Line
+	3250 4550 3250 3800
+Wire Wire Line
+	3700 5300 3700 4550
+Wire Wire Line
+	3700 1600 6650 1600
+Wire Wire Line
+	6650 1600 6650 2650
+Wire Wire Line
+	6650 2650 7150 2650
+Connection ~ 3700 2200
+Wire Wire Line
+	3700 2200 3700 1600
+Connection ~ 3700 3000
+Wire Wire Line
+	3700 3000 3700 2200
+Connection ~ 3700 3800
+Wire Wire Line
+	3700 3800 3700 3000
+Connection ~ 3700 4550
+Wire Wire Line
+	3700 4550 3700 3800
+Wire Wire Line
+	4150 5300 4150 4550
+Wire Wire Line
+	4150 1700 6550 1700
+Wire Wire Line
+	6550 1700 6550 2750
+Wire Wire Line
+	6550 2750 7150 2750
+Connection ~ 4150 2200
+Wire Wire Line
+	4150 2200 4150 1700
+Connection ~ 4150 3000
+Wire Wire Line
+	4150 3000 4150 2200
+Connection ~ 4150 3800
+Wire Wire Line
+	4150 3800 4150 3000
+Connection ~ 4150 4550
+Wire Wire Line
+	4150 4550 4150 3800
+Wire Wire Line
+	7150 2450 6850 2450
+Wire Wire Line
+	8650 2450 8650 4400
+Wire Wire Line
+	8650 4400 9050 4400
+Wire Wire Line
+	9050 4400 9050 4950
+Wire Wire Line
+	9950 3250 9950 4950
+NoConn ~ 7150 1950
+NoConn ~ 7150 2050
+NoConn ~ 7150 2350
+NoConn ~ 7150 3450
+NoConn ~ 7150 3550
+NoConn ~ 9050 5150
+NoConn ~ 9050 5250
+NoConn ~ 9050 5350
+NoConn ~ 9050 5450
+NoConn ~ 9050 5550
+NoConn ~ 8350 3550
+NoConn ~ 8350 3450
+NoConn ~ 8350 3350
+NoConn ~ 8350 3150
+NoConn ~ 8350 3050
+NoConn ~ 8350 2950
+NoConn ~ 8350 2850
+NoConn ~ 8350 2750
+NoConn ~ 8350 2350
+NoConn ~ 8350 2150
+NoConn ~ 8350 2050
+NoConn ~ 8350 1950
+Wire Wire Line
+	8350 3250 9950 3250
+Wire Wire Line
+	8350 2450 8650 2450
+$Comp
+L Arduino:Arduino_Micro U2
+U 1 1 60E9BE47
+P 7750 2750
+F 0 "U2" H 7750 3839 60  0000 C CNN
+F 1 "Arduino_Micro" H 7750 3733 60  0000 C CNN
+F 2 "Arduino:Arduino_Micro" H 7750 1800 60  0001 C CNN
+F 3 "https://store.arduino.cc/usa/arduino-micro" H 7900 1700 60  0001 C CNN
+	1    7750 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 60FBD2B5
+P 6850 5950
+F 0 "#PWR0101" H 6850 5700 50  0001 C CNN
+F 1 "GND" H 6855 5777 50  0000 C CNN
+F 2 "" H 6850 5950 50  0001 C CNN
+F 3 "" H 6850 5950 50  0001 C CNN
+	1    6850 5950
+	1    0    0    -1  
+$EndComp
+Connection ~ 8650 2450
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 60FEFAA4
+P 8650 1650
+F 0 "#FLG0101" H 8650 1725 50  0001 C CNN
+F 1 "PWR_FLAG" H 8650 1823 50  0000 C CNN
+F 2 "" H 8650 1650 50  0001 C CNN
+F 3 "~" H 8650 1650 50  0001 C CNN
+	1    8650 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 4400 7250 4400
+Wire Wire Line
+	7250 4400 7250 4900
+Connection ~ 8650 4400
+Wire Wire Line
+	7150 3350 7100 3350
+Wire Wire Line
+	7100 3350 7100 4900
+Wire Wire Line
+	6850 2450 6850 5350
+Wire Wire Line
+	6900 5350 6850 5350
+Wire Wire Line
+	6850 5350 6850 5750
+Connection ~ 6850 5350
+Wire Wire Line
+	10050 2250 10050 5550
+Wire Wire Line
+	9950 5550 10050 5550
+Wire Wire Line
+	10050 5550 10050 5750
+Wire Wire Line
+	10050 5750 6850 5750
+Connection ~ 10050 5550
+Connection ~ 6850 5750
+Wire Wire Line
+	6850 5750 6850 5950
+Wire Wire Line
+	8350 2250 10050 2250
+Wire Wire Line
+	8650 2450 8650 1650
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 61077432
+P 10050 1650
+F 0 "#FLG0102" H 10050 1725 50  0001 C CNN
+F 1 "PWR_FLAG" H 10050 1823 50  0000 C CNN
+F 2 "" H 10050 1650 50  0001 C CNN
+F 3 "~" H 10050 1650 50  0001 C CNN
+	1    10050 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 2250 10050 1650
+Connection ~ 10050 2250
+$EndSCHEMATC
